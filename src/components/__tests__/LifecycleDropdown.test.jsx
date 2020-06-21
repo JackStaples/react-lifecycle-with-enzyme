@@ -121,6 +121,16 @@ const getJsxComponent = () => {
   );
 };
 
+beforeEach(() => {
+  mockGetTeams.mockClear();
+  mockOnChange.mockClear();
+  mockCalledInConstructor.mockClear();
+  mockCalledInComponentDidMount.mockClear();
+  mockCalledInComponentDidUpdate.mockClear();
+  mockCalledInComponentWillUnmount.mockClear();
+  mockCalledInRender.mockClear();
+});
+
 describe("<LifecycleDropdown", () => {
   it("can do a shallow render", () => {
     const wrapper = shallow(getJsxComponent());
